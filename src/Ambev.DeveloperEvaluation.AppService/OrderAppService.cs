@@ -65,6 +65,9 @@ namespace Ambev.DeveloperEvaluation.AppService
             if (!validationResult.IsValid)
                 throw new ValidationException(validationResult.Errors);
 
+            if (!await orderRepository.ExistsOrder(command.Id))
+                return null;
+
             var entity = mapper.Map<Order>(command);
 
             CalculateDiscount(entity);

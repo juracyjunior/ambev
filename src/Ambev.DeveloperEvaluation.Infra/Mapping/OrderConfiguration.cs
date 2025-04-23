@@ -17,24 +17,24 @@ namespace Ambev.DeveloperEvaluation.Infra.Mapping
                 .HasDefaultValueSql("gen_random_uuid()");
             
             builder.Property(p => p.IdCustomer)
-                .HasColumnName("idCustomer")
+                .HasColumnName("idcustomer")
                 .IsRequired();
             
             builder.Property(p => p.IdBranch)
-                .HasColumnName("idBranch")
+                .HasColumnName("idbranch")
                 .IsRequired();
             
             builder.Property(p => p.SaleDate)
-                .HasColumnName("saleDate")
+                .HasColumnName("saledate")
                 .IsRequired();
 
             builder.Property(p => p.SaleNumber)
-                .HasColumnName("saleNumber")
+                .HasColumnName("salenumber")
                 .HasDefaultValueSql("gen_random_uuid()");
 
             builder.Property(p => p.IsCancelled)
                 .IsRequired()
-                .HasColumnName("isCancelled")
+                .HasColumnName("iscancelled")
                 .HasDefaultValue(false);
 
             builder.HasOne(o => o.Customer)

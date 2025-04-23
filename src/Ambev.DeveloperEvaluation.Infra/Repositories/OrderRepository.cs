@@ -40,6 +40,11 @@ namespace Ambev.DeveloperEvaluation.Infra.Repositories
                 .FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
         }
 
+        public async Task<bool> ExistsOrder(Guid id, CancellationToken cancellationToken = default)
+        {
+            return await _context.Orders.AnyAsync(o => o.Id == id);
+        }
+
         public async Task<Order> CreateAsync(Order order, CancellationToken cancellationToken = default)
         {
             if (order == null)

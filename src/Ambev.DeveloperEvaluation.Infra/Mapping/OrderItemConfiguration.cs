@@ -8,7 +8,7 @@ namespace Ambev.DeveloperEvaluation.Infra.Mapping
     {
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
-            builder.ToTable("orderItem");
+            builder.ToTable("orderitem");
 
             builder.HasKey(p => p.Id);
 
@@ -17,11 +17,11 @@ namespace Ambev.DeveloperEvaluation.Infra.Mapping
                 .HasDefaultValueSql("gen_random_uuid()");
 
             builder.Property(p => p.IdOrder)
-                .HasColumnName("idOrder")
+                .HasColumnName("idorder")
                 .IsRequired();
             
             builder.Property(p => p.IdProduct)
-                .HasColumnName("idProduct")
+                .HasColumnName("idproduct")
                 .IsRequired();
             
             builder.Property(p => p.Quantity)
@@ -29,7 +29,7 @@ namespace Ambev.DeveloperEvaluation.Infra.Mapping
                 .IsRequired();
 
             builder.Property(p => p.UnitPrice)
-                .HasColumnName("unitPrice")
+                .HasColumnName("unitprice")
                 .IsRequired();
 
             builder.Property(p => p.Discount)
