@@ -72,6 +72,10 @@ This project is a .NET 8-based API designed for managing orders. It provides end
 
 - The project uses AutoMapper for object mapping and FluentValidation for input validation.
 
+## Database
+
+- Create a PostgreSQL database and execute the script: `database/ambev.sql`. 
+
 ---
 
 Feel free to reach out for any questions or issues!
