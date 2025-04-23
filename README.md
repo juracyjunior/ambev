@@ -23,7 +23,9 @@ This project is a .NET 8-based API designed for managing orders. It provides end
 
 ## Configuration
 
-1. **Database Connection**: Update the `ConnectionStrings:DefaultConnection` in `appsettings.json` with your database credentials:
+1. **Create Database**: Create a PostgreSQL database and execute the script: `database/ambev.sql`. 
+
+2. **Database Connection**: Update the `ConnectionStrings:DefaultConnection` in `appsettings.json` with your database credentials:
    ```
    "ConnectionStrings": {
       "DefaultConnection": "Host=<host>;Database=<database>;Username=<username>;Password=<password>"
@@ -71,10 +73,6 @@ This project is a .NET 8-based API designed for managing orders. It provides end
   - Quantity 10-20: 20% discount.
 
 - The project uses AutoMapper for object mapping and FluentValidation for input validation.
-
-## Database
-
-- Create a PostgreSQL database and execute the script: `database/ambev.sql`. 
 
 ---
 
